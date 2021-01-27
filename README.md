@@ -1,1 +1,1 @@
-# day3: Learning shell
+# day3: Learning shell & system engineering devops
