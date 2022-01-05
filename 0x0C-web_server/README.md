@@ -29,27 +29,19 @@ Tips: to test your answer Bash script, feel free to reproduce the checker enviro
 Check out the Docker concept page for more info about how to manipulate containers.
 ## Resources
 Read or watch :
-* [How the web works](https://intranet.hbtn.io/rltoken/4tRRzyyETAySzU-bgNGLSw) 
-
-* [Nginx](https://intranet.hbtn.io/rltoken/H9OfhUnBDdxV-QQnIucMlA) 
-
-* [How to Configure Nginx](https://intranet.hbtn.io/rltoken/wePwmjbJDgJZO7YPvffWxQ) 
-
+* [How the web works](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works) 
+* [Nginx](https://en.wikipedia.org/wiki/Nginx) 
+* [How to Configure Nginx](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04) 
 * Child process concept page
-* [Root and sub domain](https://intranet.hbtn.io/rltoken/S2JO8E1CftLXOgvCfYf78A) 
-
-* [HTTP requests](https://intranet.hbtn.io/rltoken/C9s3U62JbiOAvn9WCoxKsA) 
-
-* [HTTP redirection](https://intranet.hbtn.io/rltoken/kI4vRQ6vc45Wfbdo3UD8Lw) 
-
-* [Not found HTTP response code](https://intranet.hbtn.io/rltoken/5UvC588x2hZR7dm6eRFPoQ) 
-
-* [Logs files on Linux](https://intranet.hbtn.io/rltoken/bkqQ72HZVAV65G8nB503Pw) 
+* [Root and sub domain](https://landingi.com/help/domains-vs-subdomains/) 
+* [HTTP requests](https://www.tutorialspoint.com/http/http_methods.htm) 
+* [HTTP redirection](https://moz.com/learn/seo/redirection) 
+* [Not found HTTP response code](https://en.wikipedia.org/wiki/HTTP_404) 
+* [Logs files on Linux](https://www.cyberciti.biz/faq/ubuntu-linux-gnome-system-log-viewer/) 
 
 For reference:
-* [RFC 7231 (HTTP/1.1)](https://intranet.hbtn.io/rltoken/Ip0atFgh-X8dcQxQdUyVUA) 
-
-* [RFC 7540 (HTTP/2)](https://intranet.hbtn.io/rltoken/cwfqkSHy98XGvyezL5KIIA) 
+* [RFC 7231 (HTTP/1.1)](https://datatracker.ietf.org/doc/html/rfc7231) 
+* [RFC 7540 (HTTP/2)](https://datatracker.ietf.org/doc/html/rfc7540) 
 
 man or help : 
 *  ` scp ` 
