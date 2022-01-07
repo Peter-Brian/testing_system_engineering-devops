@@ -5,7 +5,7 @@ package { 'nginx':
 }
 
 file { '/var/www/html/index.html':
-  content => 'Holberton School for the win!'
+  content => 'Hellow World'
 }
 
 file_line { 'redirection-301':
