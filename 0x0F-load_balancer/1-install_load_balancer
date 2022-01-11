@@ -18,6 +18,6 @@ backend web-server
 	server 3014-web-02 3.84.98.183:80 check
 "
 
-echo "$configuration" >> /etc/haproxy/haproxy.cfg
-echo "ENABLED=1" >> /etc/default/haproxy
+sudo echo "$configuration" >> /etc/haproxy/haproxy.cfg
+sudo echo "ENABLED=1" >> /etc/default/haproxy
 sudo service haproxy start
