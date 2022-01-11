@@ -40,11 +40,11 @@ Read or watch :
 * The first line of all your Bash scripts should be exactly  ` #!/usr/bin/env bash ` 
 * The second line of all your Bash scripts should be a comment explaining what is the script doing
 ## Your servers
-NameUsernameIPState3014-web-01 ` ubuntu `  ` 34.74.53.248 ` running              Actions              Toggle Dropdown
-
-3014-web-02 ` ubuntu `  ` 3.84.98.183 ` running              Actions              Toggle Dropdown* [Soft reboot](https://intranet.hbtn.io/servers/7137/soft_reboot) 
-
-3014-lb-01 ` ubuntu `  ` 34.227.103.152 ` running              Actions              Toggle Dropdown* [Soft reboot](https://intranet.hbtn.io/servers/7138/soft_reboot) 
+Name|Username|IP|State
+---|---|---|---
+3014-web-01|` ubuntu `|` 34.X.X.X `|running
+3014-web-02|` ubuntu `|` 3.X.X.X `|running
+3014-lb-01|` ubuntu `|` 34.X.X.X `|running
 
 ## Tasks
 ### 0. Double the number of webservers
