@@ -9,7 +9,7 @@ sudo chown -R ubuntu /etc/default
 
 sudo echo "
 frontend http
-    bind *: 80
+    bind *:80
     mode http
     default_backend web-server
 
