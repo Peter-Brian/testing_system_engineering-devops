@@ -8,12 +8,12 @@ sudo chown -R ubuntu /etc/haproxy
 
 sudo echo "
 frontend http
-    bind *:80
-    mode http
-    default_backend web-server
+	bind *:80
+	mode http
+	default_backend web-server
 
 backend web-server
-    balance roundrobin
-    server 3014-web-01 34.74.53.248:80 check
-    server 3014-web-02 3.84.98.183:80 check" >> /etc/haproxy/haproxy.cfg
+	balance roundrobin
+	server 3014-web-01 34.74.53.248:80 check
+	server 3014-web-02 3.84.98.183:80 check" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
