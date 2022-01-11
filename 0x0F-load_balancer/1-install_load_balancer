@@ -22,4 +22,4 @@ backend web-server
 
 sudo echo "$configuration" >> /etc/haproxy/haproxy.cfg
 sudo echo "ENABLED=1" >> /etc/default/haproxy
-sudo service haproxy start
+sudo service haproxy restart
