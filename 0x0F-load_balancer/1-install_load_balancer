@@ -2,20 +2,22 @@
 # Script that configures a load balancer for Ubuntu 20.04
 sudo apt-get update
 sudo apt-get install -y haproxy=2.0.\*
+sudo apt-get upgrade -y
 
 sudo chown -R ubuntu /etc/haproxy
 sudo chown -R ubuntu /etc/default
 
 configuration="\
+
 frontend http
-	bind *: 80
-	mode http
-	default_backend web-server
+    bind *: 80
+    mode http
+    default_backend web-server
 
 backend web-server
-	balance roundrobin
-	server 3014-web-01 34.74.53.248:80 check
-	server 3014-web-02 3.84.98.183:80 check
+    balance roundrobin
+    server 3014-web-01 34.74.53.248:80 check
+    server 3014-web-02 3.84.98.183:80 check
 "
 
 sudo echo "$configuration" >> /etc/haproxy/haproxy.cfg
