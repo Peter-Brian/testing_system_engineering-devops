@@ -3,7 +3,7 @@
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install haproxy=2.0.\*
+sudo apt-get -y install haproxy
 
 sudo chown -R ubuntu /etc/haproxy
 
