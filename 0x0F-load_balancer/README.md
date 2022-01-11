@@ -40,30 +40,11 @@ Read or watch :
 * The first line of all your Bash scripts should be exactly  ` #!/usr/bin/env bash ` 
 * The second line of all your Bash scripts should be a comment explaining what is the script doing
 ## Your servers
-NameUsernameIPState3014-web-01 ` ubuntu `  ` 34.74.53.248 ` running              Actions              Toggle Dropdown* [Soft reboot](https://intranet.hbtn.io/servers/6865/soft_reboot) 
-
-* [Hard reboot](https://intranet.hbtn.io/servers/6865/hard_reboot) 
-
-* [
-                    Ask a new server
-                      (Last)
-](https://intranet.hbtn.io/servers/6865/ask_new) 
+NameUsernameIPState3014-web-01 ` ubuntu `  ` 34.74.53.248 ` running              Actions              Toggle Dropdown
 
 3014-web-02 ` ubuntu `  ` 3.84.98.183 ` running              Actions              Toggle Dropdown* [Soft reboot](https://intranet.hbtn.io/servers/7137/soft_reboot) 
 
-* [Hard reboot](https://intranet.hbtn.io/servers/7137/hard_reboot) 
-
-* [
-                    Ask a new server
-](https://intranet.hbtn.io/servers/7137/ask_new) 
-
 3014-lb-01 ` ubuntu `  ` 34.227.103.152 ` running              Actions              Toggle Dropdown* [Soft reboot](https://intranet.hbtn.io/servers/7138/soft_reboot) 
-
-* [Hard reboot](https://intranet.hbtn.io/servers/7138/hard_reboot) 
-
-* [
-                    Ask a new server
-](https://intranet.hbtn.io/servers/7138/ask_new) 
 
 ## Tasks
 ### 0. Double the number of webservers
