@@ -34,6 +34,7 @@ defaults
 	errorfile 504 /etc/haproxy/errors/504.http
 
 frontend http
+	mode http
 	bind *:80
 	bind *:443 ssl crt /etc/haproxy/certs/www.katein.tech.pem
 	http-request redirect scheme https unless { ssl_fc }
