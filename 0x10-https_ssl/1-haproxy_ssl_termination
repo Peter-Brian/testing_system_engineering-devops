@@ -35,17 +35,20 @@ defaults
 
 frontend http
         bind *:80
-        mode http
+        req-add X-Forwarded-Proto:\ http
         default_backend web-server
 
 frontend https
         bind *:443 ssl crt /etc/haproxy/certs/www.katein.tech/fullchain.pem
-        option http-server-close
-        http-request add-header X-Forwarded-Proto https
+        req-add X-Forwarded-Proto:\ https
+        acl letsencrypt-acl path_beg /.well-known/acme-challenge/
+        use_backend encrypt-backend if letsencrypt-acl
         default_backend web-server
 
 backend web-server
         balance roundrobin
-        redirect scheme https if !{ ssl_fc }
         server 3014-web-01 34.74.53.248:80 check
         server 3014-web-02 3.84.98.183:80 check
+
+backend encrypt-backend
+        server letsencrypt 127.0.0.1:4682
