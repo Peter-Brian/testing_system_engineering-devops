@@ -36,7 +36,6 @@ defaults
 frontend http
 	bind *:80
 	bind *:443 ssl crt /etc/haproxy/certs/www.katein.tech.pem
-	http-request redirect scheme https unless { ssl_fc }
 	mode http
 	default_backend web-server
 
