@@ -40,9 +40,12 @@ frontend http
 
 frontend https
         bind *:443 ssl crt /etc/haproxy/certs/www.katein.tech/fullchain.pem
+        option http-server-close
+        http-request add-header X-Forwarded-Proto https
         default_backend web-server
 
 backend web-server
         balance roundrobin
+        redirect scheme https if !{ ssl_fc }
         server 3014-web-01 34.74.53.248:80 check
         server 3014-web-02 3.84.98.183:80 check
