@@ -68,7 +68,7 @@ Please, remember that these blogs must be written in English to further your tec
 ### 2. Contribute!
           #advanced         Progress vs Score  Task Body Folks on the Internet have been trying to put together a comprehensive answer to the question. Help them by submitting a pull request. Paste the link in your answer file.
 [https://github.com/alex/what-happens-when#the-g-key-is-pressed](https://intranet.hbtn.io/rltoken/NjQ0PbOLIUMKW23EnCZLTA) 
-
+[solution](https://github.com/kateincoding/holberton-system_engineering-devops/blob/main/0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter/1-diagram/Networking-google.png)
 Requirements:
 * The pull request must bring meaningful value (not a typo correction or style improvement)
 * Share the pull request URL in your answer file and in the field below
