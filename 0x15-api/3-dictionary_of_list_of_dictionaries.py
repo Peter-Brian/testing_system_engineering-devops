@@ -29,7 +29,7 @@ if __name__ == "__main__":
             jsresult[USER_ID] = []
 
             # create the value of the dict of the final json file
-            jslist = jsresult[USER_ID]
+            # jslist = jsresult[USER_ID]
             for task in jstodo:
                 TASK_TITLE = task.get('title')
                 TASK_COMPLETED_STATUS = task.get('completed')
@@ -37,7 +37,8 @@ if __name__ == "__main__":
                 taskdict = {"task": TASK_TITLE,
                             "completed": TASK_COMPLETED_STATUS,
                             "username": USERNAME}
-                jslist.append(taskdict)
+                if jsresult[USER_ID] is not None:
+                    jsresult[USER_ID].append(taskdict)
 
                 # create the final dictionary
                 # js_result = {USER_ID: jslist}
