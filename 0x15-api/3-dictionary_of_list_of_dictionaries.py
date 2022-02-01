@@ -23,25 +23,26 @@ if __name__ == "__main__":
     # Assign values
     if jsuser and jstodo:
         jsresult = {}
+        user_names = {}
         for user in jsuser:
             USER_ID = user.get('id')
             USERNAME = user.get('username')
             jsresult[USER_ID] = []
+            user_names[USER_ID] = USERNAME
 
-            # create the value of the dict of the final json file
-            # jslist = jsresult[USER_ID]
-            for task in jstodo:
-                TASK_TITLE = task.get('title')
-                TASK_COMPLETED_STATUS = task.get('completed')
-                # write the internal dict
-                taskdict = {"task": TASK_TITLE,
-                            "completed": TASK_COMPLETED_STATUS,
-                            "username": USERNAME}
-                if jsresult[USER_ID] is not None:
-                    jsresult[USER_ID].append(taskdict)
+        # create the value of the dict of the final json file
+        # jslist = jsresult[USER_ID]
+        for task in jstodo:
+            TASK_TITLE = task.get('title')
+            TASK_COMPLETED_STATUS = task.get('completed')
+            # write the internal dict
+            user_id = task.get("userId")
+            taskdict = {"task": TASK_TITLE,
+                        "completed": TASK_COMPLETED_STATUS,
+                        "username": user_names.get(user_id)}
 
-                # create the final dictionary
-                # js_result = {USER_ID: jslist}
+            if jsresult.get(user_id) is not None:
+                jsresult.get(user_id).append(taskdict)
 
         # generate the jsonfile
         with open('todo_all_employees.json', 'w', newline='') as jsonfile:
