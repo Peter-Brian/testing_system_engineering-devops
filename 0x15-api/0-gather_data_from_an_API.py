@@ -29,7 +29,7 @@ if __name__ == "__main__":
         EMPLOYEE_NAME = jsuser[0].get('name')
         NUMBER_OF_DONE_TASKS = 0
         for task in jstodo:
-            if task['completed'] == 0:
+            if task.get('completed'):
                 NUMBER_OF_DONE_TASKS += 1
         TOTAL_NUMBER_OF_TASKS = len(jstodo)
 
@@ -42,5 +42,5 @@ if __name__ == "__main__":
         # Second and N lines
         for doing in jstodo:
             TASK_TITLE = doing.get('title')
-            if doing['completed'] == 0:
+            if doing.get('completed'):
                 print("\t {}".format(TASK_TITLE))
