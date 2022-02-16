@@ -8,21 +8,25 @@ def recurse(subreddit, hot_list=[], after=""):
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {'user-agent': 'MyAPI/0.0.1'}
     params = {'after': after}
-    if after is None:
-        return hot_list
 
     response = requests.get(url, headers=headers, params=params,
                             allow_redirects=False)
 
     if response.status_code == 200:
         try:
-            after = response.json().get("after")
             data = response.json().get("data")
-            children = data.get("children")
+            after = data.get("after", None)
+            children = data.get("children", None)
             for each in children:
-                hot_list.append(each.get("data").get("title"))
+                hot_list.append(each.get("data").get("title", None))
         except Exception as e:
             return None
     else:
         return None
+
+    if after is None:
+        if len(hot_list) == 0:
+            return None
+        return hot_list
+
     return recurse(subreddit, hot_list, after)
