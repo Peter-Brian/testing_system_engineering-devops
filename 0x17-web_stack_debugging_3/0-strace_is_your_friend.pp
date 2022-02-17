@@ -1,8 +1,6 @@
 # fix config file
-exec { 'fix phpp':
-environment => ['DIR=/var/www/wp-settings.php',
-                'FIX=phpp',
-                'NEW=php'],
-command     => 'sed -i s/$FIX/$NEW/g $DIR',
-provider    => shell,
+
+exec { 'fix php code 500':
+  command  => 'sed -i s/phpp/php/g /var/www/wp-settings.php',
+  provider => shell,
 }
