@@ -1,4 +1,4 @@
-#fix config file
+# fix config file
 
 exec { 'fix phpp':
   environment => ['DIR=/var/www/wp-settings.php',
