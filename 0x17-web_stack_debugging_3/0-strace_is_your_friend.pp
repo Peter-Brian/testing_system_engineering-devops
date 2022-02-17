@@ -5,5 +5,5 @@ exec { 'fix phpp':
                   'FIX=phpp',
                   'NEW=php'],
   command     => 'sudo sed -i s/$FIX/$NEW/g $DIR',
-  path        => ['/bin'],
+  path        => ['/bin', '/usr/bin']
 }
