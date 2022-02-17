@@ -1,6 +1,9 @@
-# fix config file
-
-exec { 'fix php code 500':
-  command  => 'sed -i s/phpp/php/g /var/www/wp-settings.php',
-  provider => shell,
+# fix error 500
+exec { 'fix-php-500':
+  environment => ['DIR=/var/www/html/wp-settings.php',
+                  'OLD=phpp',
+                  'NEW=php'],
+  command     => 'sudo sed -i "s/$OLD/$NEW/" $DIR',
+  path        => ['/usr/bin', '/bin'],
+  returns     => [0, 1]
 }
